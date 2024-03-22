@@ -26,6 +26,7 @@ class Jukebox
         song_selector
       when 4 
         puts "Thanks for listening, toodeloo "
+        break
       else
         puts "Huh? That wasn't an option."
       end
@@ -36,9 +37,9 @@ class Jukebox
   private
   
   def add_track
-    print "What's the name of the track?"
+    print "What's the name of the track? "
     track = gets.chomp
-    print "Who plays it?"
+    print "Who plays it? "
     artist = gets.chomp
     @tracks << Song.new(track, artist)
     puts "Whoa, that's a solid tune. You have great taste!"
