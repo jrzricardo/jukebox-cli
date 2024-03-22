@@ -9,6 +9,7 @@ class Jukebox
     loop do 
       puts "\n"
       puts "It's time for some jams! Add some of your favorite songs, and I will select one for you."
+      puts "\n"
       puts "1. Add a track"
       puts "2. Show tracklist"
       puts "3. Song selector"
@@ -25,10 +26,11 @@ class Jukebox
       when 3
         song_selector
       when 4 
-        puts "Thanks for listening, toodeloo "
+        puts "Thanks for listening, toodeloo"
         break
       else
-        puts "Huh? That wasn't an option."
+        puts"\n"
+        puts "Huh!? That wasn't an option."
       end
     end
   end
@@ -37,17 +39,24 @@ class Jukebox
   private
   
   def add_track
+    puts"\n"
     print "What's the name of the track? "
+    
     track = gets.chomp
+    
+    puts "\n"
     print "Who plays it? "
     artist = gets.chomp
     @tracks << Song.new(track, artist)
+    puts "\n"
     puts "Whoa, that's a solid tune. You have great taste!"
   end
 
   def tracklist
     @tracks.each do |song|
+      puts "\n"
       puts song
+      puts"\n"
     end
   end
 
