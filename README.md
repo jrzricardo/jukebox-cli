@@ -1,5 +1,7 @@
-# ruby-cli-template
+# Jukebox-CLI
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+A command line interface app that selects one of the user's favorite songs.
 
-- Ruby version: `3.2.1`
+## Usage 
+
+Run `ruby app.rb` in the terminal.
