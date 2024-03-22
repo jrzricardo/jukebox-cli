@@ -8,8 +8,7 @@ class Jukebox
   def insert_coin
     loop do 
       puts "\n"
-      puts "It's time for some jams! Add some of your favorite songs, and I will select one for you."
-      puts "\n"
+      puts "It's time for some jams! Add some of your favorite songs, and I will select one for you. \n"
       puts "1. Add a track"
       puts "2. Show tracklist"
       puts "3. Song selector"
@@ -26,7 +25,8 @@ class Jukebox
       when 3
         song_selector
       when 4 
-        puts "Thanks for listening, toodeloo"
+        puts "\n"
+        puts "Thanks for listening, toodeloo!"
         break
       else
         puts"\n"
@@ -53,14 +53,25 @@ class Jukebox
   end
 
   def tracklist
-    @tracks.each do |song|
+    if @tracks.empty?
+      puts "\n"
+      print "No tracks available. Please add some! \n"
+    
+    else
+      @tracks.each do |song|
       puts "\n"
       puts song
-      puts"\n"
+      end
     end
   end
 
-  def song_selctor
-    prints "Now playing: #{@tracks.sample}"
+  def song_selector
+    if @tracks.empty?
+      puts "\n"
+      print "No tracks available. Please add some! \n"
+    else
+    puts "\n"
+    print "Now playing: #{@tracks.sample} \n"
+    end
   end
 end
