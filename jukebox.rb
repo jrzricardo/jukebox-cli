@@ -36,7 +36,6 @@ class Jukebox
   end
 
 
-  private
   
   def add_track
     puts"\n"
